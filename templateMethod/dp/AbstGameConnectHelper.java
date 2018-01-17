@@ -1,4 +1,4 @@
-package templateMathod.dp;
+package templateMethod.dp;
 
 public abstract class AbstGameConnectHelper {
     protected abstract String doSecurity(String string);

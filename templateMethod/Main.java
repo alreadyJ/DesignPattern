@@ -1,6 +1,6 @@
-package templateMathod;
+package templateMethod;
 
-import templateMathod.dp.DefaultGameConnectHelper;
+import templateMethod.dp.DefaultGameConnectHelper;
 
 import java.io.IOException;
 

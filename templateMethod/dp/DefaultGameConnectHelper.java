@@ -1,4 +1,4 @@
-package templateMathod.dp;
+package templateMethod.dp;
 
 public class DefaultGameConnectHelper extends AbstGameConnectHelper {
     @Override
@@ -55,5 +55,7 @@ public class DefaultGameConnectHelper extends AbstGameConnectHelper {
     * 알고리즘을 수행할 템플릿 메소드를 만든다. (여기서는 requestConnection 메소드가 해당됨)
     * 하위 클래스에서 나눠진 메소드들을 구현한다.
     *
+    *
+    * -단점 : 상속을 통하여 구현이 되므로 해당 추상 메소드가 필요한 클래스마다 상속을 받아야 한다.
     * */
 }
