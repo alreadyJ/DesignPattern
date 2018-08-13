@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProxyInternet implements Internet {
-    private Internet internet = new RealInternet();
+    private Internet internet;
     private static List<String> bannedSites;
     static {
         bannedSites = new ArrayList<>();
@@ -12,8 +12,15 @@ public class ProxyInternet implements Internet {
         bannedSites.add("lnm.com");
     }
 
+    public ProxyInternet() {
+        internet = new RealInternet();
+    }
+
     @Override
     public void connectTo(String serverHost) throws Exception {
+        /*
+        connection 을 프록시에서 결정하도록 한다.
+        */
         if (bannedSites.contains(serverHost.toLowerCase())) {
             throw new Exception("Access Denied");
         }
